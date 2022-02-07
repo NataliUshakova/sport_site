@@ -1,27 +1,459 @@
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.section-none {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  ul {
+    display: flex;
+  }
+}
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+%transition-color {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+%transition-border {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+%transition-bg {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+%network {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+}
+
+/* цвета текта */
+$primary-text-color: #757575;
+$secondary-text-color: #212121;
+$accent-color: #2196f3;
+$primary-white-color: #ffffff;
+$footer-contacts-color: rgba(255, 255, 255, 0.6);
+$footer-end-color: rgba(255, 255, 255, 0.4);
+/* цвета фонов секций и элементов */
+$background-services-color: rgba(47, 48, 58, 0.8);
+$background-elements-color: #f5f4fa;
+$background-hero-color: rgba(47, 48, 58, 0.8);
+$background-sections-color: #e5e5e5; /* преимущества, чем мы занимаемся, клиенты */
+$background-team-color: #f5f4fa; /* сотрудники */
+$background-footer-color: #2f303a;
+$background-footer-logo-color: rgba(255, 255, 255, 0.1);
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #ececec;
   background-color: #fff;
-  color: #424242;
-  max-width: 960px;
-  padding: 16px;
+  & .container {
+    position: relative;
+  }
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #ececec;
+  background-color: $primary-white-color;
+}
+
+.header > .container {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    padding: 10px 15px;
+  }
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 100;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal {
+      overflow-y: scroll;
+
+      transform: translate(-50%, -50%) scale(1.2);
+      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  color: $secondary-text-color;
+  background-color: $primary-white-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+}
+
+.modal-title {
+  margin-bottom: 30px;
+
   font-weight: 700;
-  background-color: #009688;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $secondary-text-color;
+}
+.send {
+  justify-content: center;
 }
 
-.example .background {
-  height: 240px;
-  // Путь к изображениям из SASS-файла всегда такой, как из папки css
-  background-image: url('../images/demo.jpg');
-  background-size: cover;
-  background-position: center;
+.nav {
+  @extend %flex;
+  > a {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 56px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 60px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+    font-size: 18px;
+    line-height: 1.17;
+  }
+}
+
+.link {
+  padding: 32px 0;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  @extend %transition-color;
+  @extend %flex;
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+    padding: 0;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.site-nav {
+  @extend %flex;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  &-title {
+    @media screen and (min-width: 768px) {
+      margin-left: 25px;
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      margin: 0;
+      padding: 0;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+.current {
+  color: $accent-color;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+
+    background-color: $accent-color;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 8px;
+    &::after {
+      top: 100%;
+    }
+  }
+}
+
+.menu-button {
+  @extend %transition-color;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    outline: none;
+  }
+}
+.menu-button.is-open .hidden-icon {
+  display: block;
+}
+.menu-button.is-open .burger-icon {
+  display: none;
+}
+
+.menu-button .burger-icon {
+  display: block;
+}
+.menu-button .hidden-icon {
+  display: none;
+}
+
+.mobile-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 700px;
+    z-index: 1000;
+    padding: 60px 20px 60px 10px;
+    background-color: #fff;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+    pointer-events: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+.mobile-menu.is-open {
+  @media screen and (max-width: 767px) {
+    display: block;
+    // opacity: 1;
+    pointer-events: initial;
+  }
+}
+
+.logo {
+  text-decoration: none;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  &-studio {
+    color: #000000;
+  }
+  &-footer {
+    color: #ffffff;
+  }
+  @media screen and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 56px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    margin-right: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-button {
+    margin-left: auto;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.logo {
+  width: 30%;
+}
+
+main {
+  position: relative;
+  top: 170px;
+  z-index: 0;
+  padding: 100px 0 0 0;
+  @media screen and (max-width: 767px) {
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.general-list {
+  display: flex;
+  // flex-wrap: wrap;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+
+  & li {
+    flex-wrap: wrap;
+    width: calc((100%-40px) / 2);
+    text-align: center;
+    // display: inline-block;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    & a {
+      text-decoration: none;
+      color: #1a534d;
+      bottom: 0;
+      // align-items: center;
+      vertical-align: middle;
+    }
+    &:nth-child(2) {
+      padding-top: 40px;
+      & span {
+        // padding-bottom: 55px;
+        position: absolute;
+        bottom: 0;
+        left: calc(100% / 3);
+      }
+    }
+    // &span:nth-child(2) {
+    //   position: absolute;
+    // }
+  }
+}
+
+.button-close {
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  fill: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 5px;
+  background-color: $primary-white-color;
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+
+    fill: $accent-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    background-color: $primary-white-color;
+  }
+}
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
 }
