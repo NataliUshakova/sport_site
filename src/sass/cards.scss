@@ -4,7 +4,21 @@
   padding: 10px;
   justify-content: center;
   & li {
-    width: 30%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin: 5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid black;
+    // background: linear-gradient(45deg, rgba(225, 161, 37, 0.8), rgba(86, 181, 184, 0.8));
+    border-color: $accent-color;
+    & p {
+      margin-top: 5px;
+      font-size: 8px;
+    }
   }
 }
 #foo {
@@ -45,4 +59,9 @@
   @media screen and (min-width: 767px) {
     top: 125px;
   }
+}
+.sport-item-img {
+  // width: 40%;
+  max-height: 42px;
+  min-height: 35px;
 }
