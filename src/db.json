@@ -4,37 +4,37 @@
             "id": 1,
             "image": "https://olympic.ru/wp-content/uploads/2021/06/Artboard-1_16.png",
             "title": "RHYTHMIC GYMNASTICS",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         },
         {
             "id": 2,
             "image": "https://olympic.ru/wp-content/uploads/2021/06/Artboard-1_12.png",
             "title": "BASKETBALL",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         },
         {
             "id": 3,
             "image": "https://olympic.ru/wp-content/uploads/2021/06/Artboard-1_1.png",
             "title": "JUDO",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         },
                 {
             "id": 4,
             "image": "https://olympic.ru/wp-content/uploads/2021/06/Artboard-1_26.png",
             "title": "GYMNASTICS",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         },
                 {
             "id": 5,
             "image": "https://olympic.ru/wp-content/uploads/2021/06/Artboard-1_3.png",
             "title": "WEIGHTLIFTING",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         },
                 {
             "id": 6,
             "image": "https://olympic.ru/wp-content/uploads/2021/06/Artboard-1_23.png",
             "title": "TENNIS",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         },
                 {
             "id": 7,
