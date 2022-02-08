@@ -1,0 +1,48 @@
+.sport-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+  & li {
+    width: 30%;
+  }
+}
+#foo {
+  padding: 0;
+}
+.page-title {
+  padding: 40px;
+  background: linear-gradient(45deg, rgba(225, 161, 37, 0.8), rgba(86, 181, 184, 0.8)),
+    url('../images/Gerald_G_Golf_Decoration.svg');
+  border-radius: 20px;
+}
+.summer-title {
+  font-size: 24px;
+  color: $primary-white-color;
+}
+
+.description {
+  position: absolute;
+  top: 100px;
+  padding: 20px;
+  font-size: 12px;
+  text-align: justify;
+  @media screen and (min-width: 767px) {
+    top: 150px;
+  }
+}
+
+.back-btn {
+  border: 1px solid $accent-color;
+  position: absolute;
+  z-index: 10000;
+  top: 85px;
+  left: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  background: linear-gradient(45deg, rgba(225, 161, 37, 0.3), rgba(86, 181, 184, 0.3));
+  @media screen and (min-width: 767px) {
+    top: 125px;
+  }
+}

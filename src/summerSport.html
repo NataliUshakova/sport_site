@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Summer Sport</title>
+    <link rel="stylesheet" href="./sass/main.scss">
 <body>
-    
+            <header class="header">
+                <div class="container">
+                    <a href="./index.html" class="logo-link">
+                        <img src="./images/logo.png" alt="logo" class="logo">
+                    </a>
+                    <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button
+                        data-modal-open>
+                        <svg aria-label="Переключатель мобильного меню" class="menu-icon" width="40px" height="40px">
+                            <use class="burger-icon" href="./images/symbol-defs.svg#icon-menu"></use>
+                            <use class="hidden-icon" href="./images/symbol-defs.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <!-- Открытая модалка -->
+                    <div class="mobile-menu" data-menu data-modal-close>
+                        <nav class="nav">
+                            <ul class="site-nav">
+                                <li class="site-nav-title">
+                                    <a href="./summerSport.html" class="link">SUMMER SPORT</a>
+                                </li>
+                                <li class="site-nav-title">
+                                    <a href="./winterSport.html" class="link">WINTER SPORT</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main id="foo">
+                <div class="page-title">
+                    <h2 class="summer-title">SUMMER SPORT</h2>
+                </div>
+                <ul class="sport-list"></ul>
+            </main>
+            <script src="./js/modal.js"></script>
+            <script src="./index.js"></script>
+            <script src="./js/menu.js"></script>
+
 </body>
 </html>

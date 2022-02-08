@@ -1,14 +1,17 @@
-// (() => {
-//   const menuBtnRef = document.querySelector("[data-menu-button]");
-//   const mobileMenuRef = document.querySelector("[data-menu]");
+import axios from 'axios';
+import cards from '../../cardGallery.hbs';
 
-//   menuBtnRef.addEventListener("click", () => {
-//     const expanded =
-//       menuBtnRef.getAttribute("aria-expanded") === "true" || false;
 
-//     menuBtnRef.classList.toggle("is-open");
-//     menuBtnRef.setAttribute("aria-expanded", !expanded);
+const ul = document.querySelector('.sport-list');
+const renderSports = function () {
+      axios
+    .get('http://localhost:3000/icons')
+          .then(({ data }) => {
+              data.map(el => {
+                  ul.insertAdjacentHTML('afterbegin', cards(el));
+              })
+          })
+    
+}
 
-//     mobileMenuRef.classList.toggle("is-open");
-//   });
-// })();
+renderSports();
