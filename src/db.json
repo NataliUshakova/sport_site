@@ -40,19 +40,19 @@
             "id": 7,
             "image": "https://svgsilh.com/svg/40765.svg",
             "title": "FOOTBALL",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         },
                 {
             "id": 8,
             "image": "https://svgsilh.com/svg/40804.svg",
             "title": "BOX",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         },
                 {
             "id": 9,
             "image": "https://svgsilh.com/svg/40799.svg",
             "title": "VOLLEYBALL",
-            "url": "../cycling.html"
+            "url": "./cycling.html"
         }
     ]
 }
