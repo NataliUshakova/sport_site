@@ -38,7 +38,7 @@
 }
 #foo-descr {
   padding: 0;
-  margin: 20px 0;
+  margin: 20px 7px;
   background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
     url(../images/summer/volleyball-g8b2e630cb_1920.jpg);
   background-size: 100%;
@@ -114,13 +114,15 @@
   position: fixed;
   z-index: 10000;
   top: 85px;
-  left: 25px;
+  left: 15px;
   padding: 5px;
   border-radius: 5px;
   text-decoration: none;
   background: linear-gradient(45deg, rgba(225, 161, 37, 0.3), rgba(86, 181, 184, 0.3));
   @media screen and (min-width: 767px) {
     top: 125px;
+    left: 20px;
+    padding: 15px;
   }
 }
 .sport-item-img {
