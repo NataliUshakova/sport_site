@@ -15,20 +15,40 @@
     border: 1px solid black;
     // background: linear-gradient(45deg, rgba(225, 161, 37, 0.8), rgba(86, 181, 184, 0.8));
     border-color: $accent-color;
+    &.winter {
+      border-color: rgba(86, 181, 184, 0.8);
+    }
+    @media screen and(min-width: 769px) {
+      width: 150px;
+      height: 150px;
+    }
     & p {
       margin-top: 5px;
       font-size: 8px;
+      @media screen and(min-width: 769px) {
+        margin-top: 10px;
+        font-size: 14px;
+      }
     }
   }
 }
+
 #foo {
   padding: 0;
 }
+
 .page-title {
   padding: 40px;
-  background: linear-gradient(45deg, rgba(225, 161, 37, 0.8), rgba(86, 181, 184, 0.8)),
+  background: linear-gradient(45deg, rgba(225, 161, 37, 0.9), rgba(86, 181, 184, 0.6)),
     url('../images/Gerald_G_Golf_Decoration.svg');
   border-radius: 20px;
+  @media screen and(min-width: 769px) {
+    margin-bottom: 20px;
+  }
+  &.winter-header {
+    background: linear-gradient(45deg, rgba(86, 181, 184, 0.9), rgba(225, 161, 37, 0.6)),
+      url('../images/Gerald_G_Golf_Decoration.svg');
+  }
 }
 .summer-title {
   font-size: 24px;
@@ -61,7 +81,12 @@
   }
 }
 .sport-item-img {
-  // width: 40%;
   max-height: 42px;
   min-height: 35px;
+  max-width: 50px;
+  @media screen and(min-width: 769px) {
+    max-height: 74px;
+    min-height: 70px;
+    max-width: 90px;
+  }
 }
