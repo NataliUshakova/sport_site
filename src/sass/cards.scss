@@ -59,6 +59,7 @@
     display: inline-block;
     color: $accent-color;
     padding-bottom: 10px;
+    font-size: 20px;
   }
   @media screen and(min-width: 769px) {
     background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
@@ -144,6 +145,46 @@
   @media screen and(min-width: 769px) {
     background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
       url(../images/summer/gymnastics_bg_tab.jpg) !important;
+  }
+}
+.biathlon {
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+    url(../images/winter/biathlon_bg_mob.jpg) !important;
+  @media screen and(min-width: 769px) {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
+      url(../images/winter/biathlon_bg_mob.jpg) !important;
+  }
+}
+.hockey {
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+    url(../images/winter/hockey_bg_tab.jpg) !important;
+  @media screen and(min-width: 769px) {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
+      url(../images/winter/hockey_bg_tab.jpg) !important;
+  }
+}
+.curling {
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+    url(../images/winter/curling_bg_tab.jpg) !important;
+  @media screen and(min-width: 769px) {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
+      url(../images/winter/curling_bg_tab.jpg) !important;
+  }
+}
+.snowboard {
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+    url(../images/winter/snowboard_bg_mob.jpg) !important;
+  @media screen and(min-width: 769px) {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
+      url(../images/winter/snowboarder_bg_tab.jpg) !important;
+  }
+}
+.bobsled {
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+    url(../images/winter/bobsled_bg_mob.jpg) !important;
+  @media screen and(min-width: 769px) {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
+      url(../images/winter/bobsled_bg_tab.jpg) !important;
   }
 }
 .page-title {
