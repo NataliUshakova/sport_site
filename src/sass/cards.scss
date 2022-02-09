@@ -36,6 +36,48 @@
 #foo {
   padding: 0;
 }
+#foo-descr {
+  padding: 0;
+  margin: 20px 0;
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)),
+    url(../images/summer/volleyball-g8b2e630cb_1920.jpg);
+  background-size: 100%;
+  background-position: 0 200px;
+  & img {
+    padding-bottom: 20px;
+  }
+  & p {
+    font-weight: 100;
+    font-size: 12px;
+    // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px 10px;
+    color: rgb(236, 221, 188);
+    // padding: 10px;
+  }
+  & span {
+    display: inline-block;
+    color: $accent-color;
+    padding-bottom: 10px;
+  }
+  @media screen and(min-width: 769px) {
+    border-radius: 10px;
+    padding: 50px 10px;
+    & img {
+      float: left;
+      border-radius: 20px;
+      padding-right: 20px;
+      padding-bottom: 0;
+    }
+    & p {
+      padding: 10px;
+      font-size: 24px;
+    }
+    & span {
+      padding: 10px;
+      font-size: 24px;
+    }
+  }
+}
 
 .page-title {
   padding: 40px;
@@ -56,19 +98,20 @@
 }
 
 .description {
-  position: absolute;
+  // position: absolute;
   top: 100px;
-  padding: 20px;
+  // padding: 20px;
   font-size: 12px;
   text-align: justify;
   @media screen and (min-width: 767px) {
-    top: 150px;
+    // top: 150px;
+    font-size: 16px;
   }
 }
 
 .back-btn {
   border: 1px solid $accent-color;
-  position: absolute;
+  position: fixed;
   z-index: 10000;
   top: 85px;
   left: 25px;
@@ -88,5 +131,13 @@
     max-height: 74px;
     min-height: 70px;
     max-width: 90px;
+  }
+}
+
+.summer-img {
+  // margin: 0;
+  // padding: 0;
+  @media screen and(min-width: 769px) {
+    width: 40%;
   }
 }
