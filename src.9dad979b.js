@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../images/Gerald_G_Golf_Decoration.svg":[["Gerald_G_Golf_Decoration.b9518cef.svg","VIUO"],"VIUO"]}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");
 },{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/sport_site/src.ad776e9e.js.map
+//# sourceMappingURL=/sport_site/src.9dad979b.js.map
