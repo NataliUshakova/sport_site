@@ -404,7 +404,7 @@ main {
   margin-right: auto;
 
   & li {
-    width: calc((100%-40px) / 2);
+    width: 50%;
     text-align: center;
     margin: 10px;
     border: 2px solid linear-gradient(45deg, rgb(217, 135, 24), rgb(86, 181, 184));
@@ -422,7 +422,7 @@ main {
         & span {
           position: absolute;
           bottom: 0;
-          left: calc(100% / 3);
+          left: 20%;
         }
       }
     }
